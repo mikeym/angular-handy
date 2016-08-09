@@ -1,18 +1,17 @@
 'use strict';
 
-describe('TinyApp main app configuration tests', function() {
+describe('HandyApp main app configuration tests', function() {
     var route;
     
-    beforeEach(module('TinyApp'));
+    beforeEach(module('HandyApp'));
     beforeEach(inject(function($route) {
         route = $route;
     }));
 
-    it('should have the correct route values for the home view', function() {
-        expect(route.routes['/home']).not.toBeNull();
-        expect(route.routes['/home'].controller).toEqual('HomeController');
-        expect(route.routes['/home'].controllerAs).toEqual('hc');
-        expect(route.routes['/home'].templateUrl).toEqual('components/home/home-view.html')
+    it('should have the correct route values for the sample view', function() {
+        expect(route.routes['/sample']).not.toBeNull();
+        expect(route.routes['/sample'].templateUrl).toEqual('components/sample/sample-view.html')
+        expect(route.routes['/sample'].controller).toBeUndefined(); // loaded by the template
     });
 
 });

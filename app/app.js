@@ -1,19 +1,17 @@
 (function () {
     'use strict';
 
-    // Create our TinyApp angular module
     angular.module('HandyApp', [
             'ngRoute',
             'ngAnimate'
         ])
         .config(['$routeProvider', function($routeProvider) {
-            $routeProvider.when('/home', {
-                templateUrl: 'components/home/home-view.html',
-                controller: 'HomeController',
-                controllerAs: 'hc'
+            $routeProvider.when('/sample', {
+                templateUrl: 'components/sample/sample-view.html'
+                // controller is loaded in the template
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/sample'
             });
         }]);
 })();

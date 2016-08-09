@@ -13,7 +13,7 @@ module.exports = function(config){
             
             // application scripts and unit tests
             'app/app.js',
-            'app/components/home/*.js',
+            'app/components/sample/*.js',
             'tests/*.js'
         ],
         

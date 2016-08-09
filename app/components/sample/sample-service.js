@@ -2,7 +2,7 @@
     'use strict';
 
     // Simple service with an http get call that returns a promise
-    function HomeService($q, $http) {
+    function SampleService($q, $http, $log) {
         var svc = {
             getFakeData: getFakeData
         };
@@ -16,6 +16,7 @@
                 .then(function success(response) {
                     defer.resolve(response);
                 }, function error(response) {
+                    $log.warn('Error contacting typicode.com. Response: ' + response.status);
                     defer.reject(response);
                 });
                 return defer.promise;
@@ -24,5 +25,5 @@
 
     angular
         .module('HandyApp')
-        .service('HomeService', ['$q', '$http', HomeService]);
+        .service('SampleService', ['$q', '$http', '$log', SampleService]);
 })();

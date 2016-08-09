@@ -1,0 +1,79 @@
+<div ng-controller="SampleController as sc" class="container" ng-cloak>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>
+                <i class="fa fa-home fa-2x"></i> This is the sample-view.html template.
+            </p>
+            <p>
+                <i class="fa fa-calendar fa-2x"></i> Today is {{sc.today}}.
+            </p>
+            <p>
+                <i class="fa fa-clock-o fa-2x"></i> <span class="time" ng-cloak>{{sc.time}}</span>
+            </p>
+            <p>
+                This sample project includes things I often use to help me get
+                started quickly on prototypes. Good stuff includes:
+            </p>
+            <ul>
+                <li><a href="https://angularjs.org/" target="_blank">Angular JS 1.5</a> web framework</li>
+                <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> responsive web styles</li>
+                <li><a href="http://momentjs.com/" target="_blank">Moment.js 2.14</a> clever time and date functions</li>
+                <li><a href="http://fontawesome.io/" target="_blank">Font Awesome 4.6</a> cute little icons</li>
+                <li><a href="http://jasmine.github.io/2.4/introduction.html" target="_blank">Jasmine 2.4</a> test framework</li>
+                <li><a href="https://karma-runner.github.io/1.0/index.html" target="_blank">Karma 1.0</a> unit test runner</li>
+            </ul>
+            <p>
+                My goals for this project were to put together a small starter app that:
+            </p>
+            <ul>
+                <li>made a call to an external API</li>
+                <li>rendered a collection into a table</li>
+                <li>included simple date and time functions via moment.js</li>
+                <li>included responsive styling via Bootstrap</li>
+                <li>included cute icons via Font Awesome</li>
+                <li>had well-structured code</li>
+                <li>had good unit tests</li>
+            </ul>
+            <p>
+                See the <a href="https://github.com/mikeym/angular-handy" target="_blank">angular-handy</a>
+                project on GitHub for more information.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!-- Panel with a table of data retrieved from an external API, or an error message. -->
+            <div class="panel" ng-class="sc.errorMessage ? 'panel-danger' : 'panel-default'">
+                <div class="panel-heading">
+                    Exciting fake data from the internet courtesy of
+                    <a href="typicode.com" target="_blank">typicode.com</a>
+                </div>
+                <!-- Table displayed if service call was successful -->
+                <table ng-if="sc.fakeData" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>User Id</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in sc.fakeData">
+                        <td>{{item.id}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.userId}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- Error message displayed if service call failed -->
+                <div ng-if="sc.errorMessage" class="panel-body">
+                    Unable to get data from the internet, maybe some tubes are blocked up.
+                    Might want to check the console log.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
