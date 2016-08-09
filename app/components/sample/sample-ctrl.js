@@ -1,8 +1,9 @@
 (function () {
     'use strict';
 
-    // Basic sample screen controller with a couple of properties for binding
-    function SampleController($scope, $interval, SampleService) {
+    // Basic sample screen controller that uses the SampleService for external data retrieval
+    // and moment for date and time functions.
+    function SampleController($scope, $interval, SampleService, moment) {
         var vm = this,
             cancelInterval;
 
@@ -43,5 +44,5 @@
     
     angular
         .module('HandyApp')
-        .controller('SampleController', ['$scope', '$interval', 'SampleService', SampleController]);
+        .controller('SampleController', [ '$scope', '$interval', 'SampleService', 'moment', SampleController ]);
 })();

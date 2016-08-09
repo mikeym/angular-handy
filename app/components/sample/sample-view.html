@@ -11,28 +11,19 @@
                 <i class="fa fa-clock-o fa-2x"></i> <span class="time" ng-cloak>{{sc.time}}</span>
             </p>
             <p>
-                This sample project includes things I often use to help me get
-                started quickly on prototypes. Good stuff includes:
+                This project includes things I often use when creating small design
+                prototypes with Angular JS. Components and references include:
             </p>
             <ul>
                 <li><a href="https://angularjs.org/" target="_blank">Angular JS 1.5</a> web framework</li>
                 <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> responsive web styles</li>
                 <li><a href="http://momentjs.com/" target="_blank">Moment.js 2.14</a> clever time and date functions</li>
                 <li><a href="http://fontawesome.io/" target="_blank">Font Awesome 4.6</a> cute little icons</li>
-                <li><a href="http://jasmine.github.io/2.4/introduction.html" target="_blank">Jasmine 2.4</a> test framework</li>
+                <li><a href="http://jasmine.github.io/2.4/introduction.html" target="_blank">Jasmine 2.4</a> unit test framework</li>
                 <li><a href="https://karma-runner.github.io/1.0/index.html" target="_blank">Karma 1.0</a> unit test runner</li>
-            </ul>
-            <p>
-                My goals for this project were to put together a small starter app that:
-            </p>
-            <ul>
-                <li>made a call to an external API</li>
-                <li>rendered a collection into a table</li>
-                <li>included simple date and time functions via moment.js</li>
-                <li>included responsive styling via Bootstrap</li>
-                <li>included cute icons via Font Awesome</li>
-                <li>had well-structured code</li>
-                <li>had good unit tests</li>
+                <li><a href="http://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> handy source of fake JSON data</li>
+                <li><a href="https://github.com/johnpapa/angular-styleguide/tree/master/a1" target="_blank">Angular 1 Style Guide</a>
+                    John Pappa's guidelines</li>
             </ul>
             <p>
                 See the <a href="https://github.com/mikeym/angular-handy" target="_blank">angular-handy</a>
@@ -48,7 +39,7 @@
             <div class="panel" ng-class="sc.errorMessage ? 'panel-danger' : 'panel-default'">
                 <div class="panel-heading">
                     Exciting fake data from the internet courtesy of
-                    <a href="typicode.com" target="_blank">typicode.com</a>
+                    <a href="http://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a>
                 </div>
                 <!-- Table displayed if service call was successful -->
                 <table ng-if="sc.fakeData" class="table table-striped">

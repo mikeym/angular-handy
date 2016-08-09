@@ -1,7 +1,7 @@
 {
   "name": "angular-handy",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A handy starter project for AngularJS that includes some things I frequently use.",
   "license": "MIT",
   "devDependencies": {
